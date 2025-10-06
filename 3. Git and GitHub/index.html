@@ -6,88 +6,408 @@
     <title>Document</title>
 
     <style>
+        body{
+            font-family:sans-serif;
+            margin: 50px 0px;
+        }
         span{
             color: rgb(226, 43, 43);
         }
+        table, th, td {
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
     </style>
 </head>
-<body >
+<body>
     <section style="margin: auto; width: 1000px;">
-        <center><h1>A Coder's HTML Cheatsheet</h1></center>
+        <center><h1>A Coder's Simple Cheatsheet to HTML & Git</h1></center>
         <img src="html.avif" width="100%" alt="html against a yellow background">
-        <table border>
-            <tr>
-                <th>HTML Tag</th>
-                <th>Use</th>
-                <th>Attributes</th>
-            </tr>
-            <tr>
-                <td>Heading Tags:
-                    <ul>
-                        <li><span>H1</span></li>
-                        <li><span>H2</span></li>
-                        <li><span>H3</span></li>
-                        <li><span>H4</span></li>
-                        <li><span>H5</span></li>
-                        <li><span>H6</span></li>
-                    </ul>
+        <br><br>
+        <p>When diving into the world of web development, understanding the fundamental building blocks of HTML is essential.
+            Whether it's structuring content, embedding media, creating interactive forms, or organizing data, HTML tags and
+            their attributes are the tools that makes the base of a web page. Given below is a concise yet comprehensive guide
+            to some of the most important HTML elements and their key attributes laid out in an easy-to-understand table.
+        </p>
+        <br><br><br>
+        <hr>
+        <br><br><br>
+       <table style="border-collapse:collapse; width:100%;">
+                <tr>
+                    <th>Tag / Element</th>
+                    <th>Description</th>
+                    <th>Key Attributes / Examples</th>
+                    <th>Decription</th>
+                </tr>
+                <tr>
+                    <td>&lt;h1&gt; to &lt;h6&gt;</td>
+                    <td>Headings from largest (&lt;h1&gt;) to smallest (&lt;h6&gt;)</td>
+                    <td>&lt;h1&gt;Main Title&lt;/h1&gt;</td>
+                    <td>Text inside a heading tag will be bold and bigger by default</td>
+                </tr>
+                <tr>
+                    <td>&lt;p&gt;</td>
+                    <td>Paragraph of text</td>
+                    <td>&lt;p&gt;This is a paragraph.&lt;/p&gt;</td>
+                    <td>Defines a paragraph on a web page.</td>
+                </tr>
+                <tr>
+                    <td>&lt;img&gt;</td>
+                    <td>Embeds an image</td>
+                    <td>
+                        Attributes:
+                        <ol type="1">
+                            <li>src</li><br>
+                            <li>alt</li><br>
+                            <li>height</li><br>
+                            <li>width</li><br>
+                        </ol>
+                        &lt;img src="pic.jpg" alt="Nature" height="200" width="300"&gt;
+                    </td>
+                    <td>
+                        <ol>
+                            <li><span>src</span> has the address of the image</li>
+                            <li><span>alt</span> is the visual aid provided in case the content was not able to load</li>
+                            <li><span>height</span> defines the height of the image</li>
+                            <li><span>width</span> defines the width of the image</li>
+                        </ol>
+                        ★ Prefer defining either only height or only width of the element to prevent the image from distortion.
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;video&gt;</td>
+                    <td>Embeds a video file</td>
+                    <td>
+                        Attributes:
+                            <ol type="1">
+                                <li>src</li><br>
+                                <li>alt</li><br>
+                                <li>height</li><br>
+                                <li>width</li><br>
+                                <li>controls</li><br>
+                                <li>mute</li><br>
+                                <li>autoplay</li><br>
+                                <li>loop</li><br>
+
+                            </ol>
+                        &lt;video src="movie.mp4" controls autoplay&gt;&lt;/video&gt;
+                    </td>
+                    <td>
+                        <ol>
+                            <li><span>controls</span> will add controls to the video like play, pause, etc.</li>
+                            <li><span>autoplay</span>will make the video start on its own when the page loads.</li>
+                            <li><span>mute</span> mutes the video by default</li>
+                            <li><span>loop</span> restarts the video on its own when it ends.</li>
+                        </ol>
+                        ★ autoplay only works when the video is muted by default.
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;audio&gt;</td>
+                    <td>Adds audio player</td>
+                    <td>
+                        Attributes:
+                            <ol type="1">
+                                <li>src</li><br>
+                                <li>alt</li><br>
+                                <li>height</li><br>
+                                <li>width</li><br>
+                                <li>controls</li><br>
+                                <li>mute</li><br>
+                                <li>autoplay</li><br>
+                                <li>loop</li><br>
+                            </ol>
+                        
+                        &lt;audio src="song.mp3" controls&gt;&lt;/audio&gt;
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>&lt;a&gt;</td>
+                    <td>Clickable link</td>
+                    <td>
+                        Attributes:
+                        <ol>
+                            <li>href</li><br>
+                            <li>target="_blank"</li>
+                        </ol>
+                        &lt;a href="https://example.com" target="_blank"&gt;Visit Site&lt;/a&gt;
+                    </td>
+                    <td><ol>
+                        <li><span>href</span> adds the web address to the link.</li>
+                        <li><span>target="_blank"</span> opens the link in a new tab when clicked.</li>
+                    </ol>
+                    </td>
+                </tr>
+                <tr>
+                <td>&lt;ol&gt;</td>
+                <td>Ordered (numbered) list</td>
+                <td>
+                    Attribute:
+                    <ol>
+                        <li>type</li><br>
+                        <li>start</li>
+                    </ol>
+                    &lt;ol type="A" start="5"&gt;
                 </td>
                 <td>
-                    <ul>
-                        <li>There are <span>6 heading tags</span>.</li>
-                        <li>The font size <span>decreases</span> from h1 to h6</li>
-                    </ul>
-                     
-                    
+                    <ol>
+                        <li>each item in Ordered List has a unique bullet.</li>
+                        <li><span>type</span> attribute can change the type of list.
+                                <ul>
+                                    <li>type="1" will make the list be in <span>1, 2, 3...</span></li>
+                                    <li>type="a" will make the list be in <span>a, b, c...</span></li>
+                                    <li>type="A" will make the list be in <span>A, B, C...</span></li>
+                                    <li>type="i" will make the list be in <span>i, ii, iii...</span></li>
+                                    <li>type="I" will make the list be in <span>I, II, III...</span></li>
+                                </ul>
+                        </li>
+                        <li>
+                            <span>start</span> defines where the count is going to start from.
+                        </li>
+                    </ol>
                 </td>
-                <td></td>
+                </tr>
+                <tr>
+                    <td>&lt;ul&gt;</td>
+                    <td>Unordered (bulleted) list</td>
+                    <td>&lt;ul&gt;...&lt;/ul&gt;</td>
+                    <td>unordered list has the same type of bullet throughout the list.</td>
+                </tr>
+                <tr>
+                    <td>&lt;li&gt;</td>
+                    <td>List item (inside ol/ul)</td>
+                    <td>&lt;li&gt;Item&lt;/li&gt;</td>
+                    <td>contains the content of one list item.</td>
+                </tr>
+                <tr>
+                    <td>&lt;table&gt;</td>
+                    <td>Table layout</td>
+                    <td>
+                        border<br>
+                        &lt;table border="1"&gt;
+                    </td>
+                    <td>Defines the beginning and end of a table.</td>
+                </tr>
+                <tr>
+                    <td>&lt;tr&gt;</td>
+                    <td>Table row</td>
+                    <td>&lt;tr&gt;...&lt;/tr&gt;</td>
+                    <td>Marks the row of the table.</td>
+                </tr>
+                <tr>
+                    <td>&lt;th&gt;</td>
+                    <td>Table header cell</td>
+                    <td>&lt;th&gt;Header&lt;/th&gt;</td>
+                    <td>
+                        <ul>
+                            <li>marks the <span>heading</span> of each column.</li>
+                            <li>it is placed in the <span>first row</span> of the table</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&lt;td&gt;</td>
+                    <td>Table data cell</td>
+                    <td>&lt;td&gt;Data&lt;/td&gt;</td>
+                    <td>describes the data in each cell of the table</td>
+                </tr>
+        </table>
+
+        <br><br><br>
+        <img src="form.avif" width="100%" alt="a form on the website">
+        <br><br><br>
+        
+        
+        <table>
+            <tr>
+                    <th>Tag / Element</th>
+                    <th>Description</th>
+                    <th>Key Attributes / Examples</th>
+                    <th>Decription</th>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                    <td>&lt;form&gt;</td>
+                    <td>Collects user input</td>
+                    <td>&lt;form&gt;...&lt;/form&gt;</td>
+                    <td>marks the beginning of a form</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&lt;input&gt;</td>
+                <td>Editable fields (text, email, etc.)</td>
+            <td>
+                Attributes:
+                <ol>
+                    <li>type</li><br>
+                    <li>placeholder</li><br>
+                    <li>value</li><br>
+                    <li>required</li><br>
+                    <li>readonly</li><br>
+                    <li>minlength</li><br>
+                    <li>maxlength</li><br>
+                    <li>name</li><br>
+                </ol>
+                &lt;input type="text" name="username" placeholder="Enter Name" required&gt;
+            </td>
+            <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&lt;label&gt;</td>
+                <td>Describes input</td>
+                <td>&lt;label for="email"&gt;Email:&lt;/label&gt;</td>
+                <td>Headings to an input field</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&lt;br&gt;</td>
+                <td>Line break</td>
+                <td>&lt;br&gt;</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&lt;select&gt;</td>
+                <td>Dropdown menu</td>
+                <td>&lt;select name="country"&gt;...&lt;/select&gt;</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&lt;option&gt;</td>
+                <td>Option in dropdown</td>
+                <td>&lt;option value="India"&gt;India&lt;/option&gt;</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&lt;input type="submit"&gt;</td>
+                <td>Submit button</td>
+                <td>&lt;input type="submit" value="Send"&gt;</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&lt;input type="radio"&gt;</td>
+                <td>Radio button (single choice)</td>
+                <td>&lt;input type="radio" name="gender" value="male"&gt; Male</td>
+                <td>
+                    ★ Add the same name attribute to all radio inputs to let only one option be selected.
+                </td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>&lt;input type="date"&gt;</td>
+                <td>Date picker</td>
+                <td>&lt;input type="date"&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;input type="datetime-local"&gt;</td>
+                <td>Date and time picker</td>
+                <td>&lt;input type="datetime-local"&gt;</td>
+            </tr>
+            <tr>
+                <td>&lt;input type="password"&gt;</td>
+                <td>Password field </td>
+                <td>&lt;input type="password"&gt;</td>
+                <td>Shows masked password</td>
             </tr>
         </table>
+        <br><br><br>
+        <hr>
+        <br><br><br>
+        <center><h1>Git Commands Simplified</h1></center>
+
+        <img src="git.avif" width="100%" alt="coding on a laptop">
+
+        <p>In the fast-paced world of software development, managing code efficiently and collaborating 
+            seamlessly are essential skills. 
+            Git, the most popular version control system, empowers developers to track changes, 
+            experiment safely, and work together without losing code history. Whether you’re just 
+            starting out or brushing up your skills, understanding Git’s core concepts and commands is key 
+            to becoming a confident coder. Below is a concise and practical overview of essential 
+            Git elements and commands, perfectly laid out in a simple table to help you 
+            navigate this powerful tool with ease.</p>
+
+        <br><br>
+        <hr>
+        <br><br>
+
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse; width:100%; font-family:sans-serif;">
+            <tr>
+            <th>Git Command</th>
+            <th>Function</th>
+            </tr>
+            <tr>
+                <td>git --version</td>
+                <td>Shows installed Git version</td>
+            </tr>
+            <tr>
+                <td>git init</td>
+                <td>Initializes a new Git repository inside the folder</td>
+            </tr>
+            <tr>
+                <td>git add file.html</td>
+                <td>Adds specified file to staging area</td>
+            </tr>
+            <tr>
+                <td>git add .</td>
+                <td>Adds all changes in current directory to staging</td>
+            </tr>
+            <tr>
+                <td>git status</td>
+                <td>Shows current status of the repository </td>
+            </tr>
+            <tr>
+                <td>git commit</td>
+                <td>Commits staged changes to the gitHub</td>
+            </tr>
+            <tr>
+                <td>git commit -m "message"</td>
+                <td>Commits stage changes with a message</td>
+            </tr>
+            <tr>
+                <td>git log</td>
+                <td>Shows commit history</td>
+            </tr>
+            <tr>
+                <td>git reset --hard copied-version-id</td>
+                <td>Resets to specified commit, discarding changes. <br><br>
+                    ★ copied-version-id is shown in the git log command. Just copy and paste it.</td>
+            </tr>
+            <tr>
+                <td>git reset --soft copied-version-id</td>
+                <td>Resets to commit but keeps changes staged</td>
+            </tr>
+            <tr>
+                <td>git remote add origin paste-url</td>
+                <td>Adds a remote repository named origin</td>
+            </tr>
+            <tr>
+                <td>git remote remove origin</td>
+                <td>Removes the origin 'remote'</td>
+            </tr>
+            <tr>
+                <td>git branch -m main</td>
+                <td>Renames current branch to main</td>
+            </tr>
+            <tr>
+                <td>git push -u origin main</td>
+                <td>Pushes local main branch and sets upstream</td>
+            </tr>
+            <tr>
+                <td>git clone gitrepositorylink</td>
+                <td>Copies a remote repository locally</td>
+            </tr>
+            <tr>
+                <td>git pull</td>
+                <td>Fetches and merges changes from remote</td>
+            </tr>
+        </table>
+        <br><br><br>
+        <hr>
+        <br><br><br>
+
+        <p>Now that you’ve got a solid grasp of the basics of HTML and Git, you’re well on your way to building cool 
+            websites and managing your code like a pro. These simple tools are the starting point for any coder, and 
+            as you keep practicing, they’ll become second nature. Remember, every expert started with these same building 
+            blocks, so keep experimenting, learning, and having fun with it—there’s a whole world of creativity waiting for you!
+        </p>
+
+        <br><br><br>
+        <hr>
+        <br><br><br>
     </section>
 </body>
 </html>
