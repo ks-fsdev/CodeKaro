@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Instrument Sans", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.back{
+    width: 42px;
+    position: absolute;
+    top: 100px;
+    left: 183px;
+}
+
+img{
+    width: 80%;
+}
+
+.card1{
+    width: 300px;
+    background-color: #1b1925;
+    text-align: center;
+    padding: 30px 10px;
+    border-radius: 10px;
+    margin: 200px auto;
+}
+
+.email{
+    font-size: smaller;
+    color: gray;
+}
+
+.email-span{
+    color: white;
+}
+
+input{
+    background-color: #1b1925;
+    border: 1px solid #7844ec;
+    text-align: center;
+    padding: 10px 30px;
+    margin: 10px 30px;
+    box-shadow: 0px 0px 4px #7844ec;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 230px;
+}
+
+input:focus{
+    color: white;
+}
+
+button{
+    background-color: #7844ec;
+    text-align: center;
+    padding: 10px 30px;
+    margin: 10px 30px;
+    border: none;
+    width: 230px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}

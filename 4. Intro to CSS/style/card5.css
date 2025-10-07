@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Instrument Sans", sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.card{
+    background-color: #1b1925;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 200px auto;
+    width: 350px;
+}
+
+.back{
+    width: 42px;
+    position: absolute;
+    top: 100px;
+    left: 183px;
+}
+
+.emoji{
+    width: 50px;
+}
+
+.card p{
+    font-size: 15px;
+    color: rgb(186, 186, 186);
+}
+
+button{
+    background-color: #7844ec;
+    text-align: center;
+    padding: 16px 30px;
+    border: none;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+form div{
+    text-align: start;
+}
+
+label{
+    font-size: 12px;
+}
+
+label:active{
+    border: 1px solid #7844ec;
+    box-shadow: 0px 0px 4px #7844ec;
+}
+
+input, select, option{
+    background-color: #1b1925;
+    border: 1px solid gray;
+    text-align: start;
+    padding: 10px 10px;
+    margin: 10px 1px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    color: white;
+}
+
+input:focus, select:focus, option:focus{
+     border: 1px solid #7844ec;
+     box-shadow: 0px 0px 4px #7844ec;
+}
