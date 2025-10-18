@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/* 
+.button-animation {
+  background-color: #fff;
+  padding: 16px 30px;
+  border: 1px solid lightgray;
+  border-radius: 12px;
+  border: 1px solid lightgray;
+  font-size: 16px;
+  transition: 0.5s;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.button-animation::after {
+  content: "";
+  background-color: rgb(0, 0, 0);
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.button-animation:hover::after {
+  width: 100%;
+}
+
+.button-animation:hover {
+  color: white;
+} */
+
+.hover-me {
+  width: 50vw;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button-animation {
+  background-color: white;
+  color: black;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid black;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button-animation::after {
+  content: "";
+  background-color: black;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -5px;
+  transition: 0.3s;
+  border-radius: 50px;
+  z-index: -1;
+}
+.button-animation:hover::after {
+  width: 110%;
+}
+
+.button-animation:hover {
+  color: white;
+}
+
+.pink {
+  padding: 10px 30px;
+  border-radius: 8px;
+  background: none;
+  border: 2px solid rgb(211, 93, 112);
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(211, 93, 112);
+  background-color: #ffc0cb;
+  position: relative;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.pink::after {
+  content: "";
+  background-color: rgb(211, 93, 112);
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.pink:hover {
+  color: white;
+}
+
+.pink:hover::after {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100px;
+}
+
+.loading {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(128, 128, 128, 0.188);
+  border-radius: 50px;
+  border-top: 4px solid black;
+  animation-name: load;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes load {
+  from {
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
